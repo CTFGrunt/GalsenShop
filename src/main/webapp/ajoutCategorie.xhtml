@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:outputText value="Libelle controleur :#{ajoutCategorieBean.categorie.libelle}"/>
+            <h:messages/>
+            <h:panelGrid columns="3">
+                <f:facet name="header">
+                    entete
+                </f:facet>
+                
+                <f:facet name="footer">
+                    <h:commandButton value="Enregister" action="#{ajoutCategorieBean.enregistrerCategorie()}" />
+                </f:facet>
+
+                <h:outputText value="Code :"/>
+                <h:inputText value="#{ajoutCategorieBean.categorie.code}" id="idCategorie" required="true" requiredMessage="Le code est obligatoire"/>
+                <h:message for="idCategorie"/>
+                
+
+                <h:outputText  value="Libelle :"/>
+                <h:inputText value="#{ajoutCategorieBean.categorie.libelle}" required="true" requiredMessage="Le libelle est obligatoire"/>
+                <h:outputText/>
+                
+                <h:outputText value="Description :"/>
+                <h:inputText value="#{ajoutCategorieBean.categorie.description}"/>
+                <h:outputText/>
+
+                <h:outputText value="age :"/>
+                <h:inputText value="#{ajoutCategorieBean.categorie.tva}"/>
+                <h:outputText/>
+
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
